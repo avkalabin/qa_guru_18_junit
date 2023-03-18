@@ -1,0 +1,46 @@
+0) TEST DATA: ["junit5", "selenide"]
+1) TITLE: В первом результате выдаче GitHub должно отображаться TEST DATA
+2) PRIORITY / SEVERITY - BLOCKER
+3*) PRECONDITIONS:
+4) STEPS
+    - Открыть браузер Chrome;
+    - Открыть страницу https://github.com
+    - В поле "Search GitHub"  ввести TEST DATA
+    - Нажать кнопку Enter
+5) EXPECTED RESULT
+    - В первом результате выдаче GitHub должно отображаться TEST DATA
+
+
+0) TEST DATA: [
+   ["Alex Egorov, alex@egorov.com, Some address 1, Another address 1"]
+   ["Ivan Semenov, ivan@semenov.com, Some address 3, Another address 4"]
+   ]
+1) TITLE: В поле вывода результатов регистрации должны отображаться {0}, {1}, {2}, {3}
+2) PRIORITY / SEVERITY - BLOCKER
+3*) PRECONDITIONS:
+4) STEPS
+    - Открыть браузер Chrome;
+    - Открыть страницу https://demoqa.com/text-box"
+    - В поле "Full Name"  ввести {0}
+    - В поле "Email"  ввести {1}
+    - В поле "Current Address"  ввести {2}
+    - В поле "Permanent Address"  ввести {3}
+    - Нажать кнопку Submit
+5) EXPECTED RESULT
+    - В поле вывода результатов регистрации должны отображаться {0}, {1}, {2}, {3}
+
+
+0) TEST DATA: [
+   [sampleFile.jpeg, "sampleFile.jpeg"]
+   [luminoslogo.png, "luminoslogo.png"]
+   ]
+1) TITLE: При загрузке файла {0} в пути загруженного файла должно отображаться {1}
+2) PRIORITY /При загрузке файла {0} в пути загруженного файла должно отображаться {1} SEVERITY - BLOCKER
+3*) PRECONDITIONS:
+4) STEPS
+    - Открыть браузер Chrome;
+    - Открыть страницу https://demoqa.com/upload-download
+    - Загрузить файл {0}
+5) EXPECTED RESULT
+    - При загрузке файла {0} в пути загруженного файла должно отображаться {1}
+

@@ -1,0 +1,20 @@
+plugins {
+    id 'java-library'
+}
+
+group 'ru.avkalabin'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation (
+            "com.codeborne:selenide:6.12.2",
+            "org.junit.jupiter:junit-jupiter:5.9.2"
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
