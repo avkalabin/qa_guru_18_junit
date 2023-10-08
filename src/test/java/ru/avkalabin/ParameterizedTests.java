@@ -22,6 +22,7 @@ public class ParameterizedTests {
     @BeforeEach
     void beforeEach() {
         Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadStrategy = "eager";
     }
 
     @DisplayName("Проверка поиска на GitHub")
@@ -29,8 +30,9 @@ public class ParameterizedTests {
     @ValueSource(strings = {"junit5", "selenide"})
     void firstSearchResultShouldContainExpectedTest(String testData) {
         open("https://github.com/");
-        $("[placeholder='Search GitHub']").setValue(testData).pressEnter();
-        $$("ul.repo-list li").first().$("a").shouldHave(text(testData));
+        $("[placeholder='Search or jump to...']").click();
+        $("#query-builder-test").setValue(testData).pressEnter();
+        $$("[data-testid='results-list'] div").first().shouldHave(text(testData));
 
     }
 
@@ -74,4 +76,5 @@ public class ParameterizedTests {
         $("#uploadedFilePath").shouldHave(text(fileName));
 
     }
+
 }
